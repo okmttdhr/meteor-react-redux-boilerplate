@@ -36,22 +36,25 @@ export default class TodoItem extends Component {
     let element;
     if (this.state.editing) {
       element = (
-        <TodoTextInput text={todo.text}
-                       editing={this.state.editing}
-                       onSave={(text) => this.handleSave(todo._id, text)} />
+        <TodoTextInput
+          text={todo.text}
+          editing={this.state.editing}
+          onSave={(text) => this.handleSave(todo._id, text)} />
       );
     } else {
       element = (
         <div className='view'>
-          <input className='toggle'
-                 type='checkbox'
-                 checked={todo.marked}
-                 onChange={() => markTodo(todo._id)} />
+          <input
+            className='toggle'
+            type='checkbox'
+            checked={todo.marked}
+            onChange={() => markTodo(todo._id)} />
           <label onDoubleClick={::this.handleDoubleClick}>
             {todo.text}
           </label>
-          <button className='destroy'
-                  onClick={() => deleteTodo(todo._id)} />
+          <button
+            className='destroy'
+            onClick={() => deleteTodo(todo._id)} />
         </div>
       );
     }

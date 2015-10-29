@@ -61,8 +61,9 @@ export default class Footer extends Component {
     const { markedCount, onClearMarked } = this.props;
     if (markedCount > 0) {
       return (
-        <button className='clear-completed'
-                onClick={onClearMarked} >
+        <button
+          className='clear-completed'
+          onClick={onClearMarked}>
           Clear completed
         </button>
       );
