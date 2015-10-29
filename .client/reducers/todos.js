@@ -46,4 +46,6 @@ function reactiveData(){
     todos: Todos.find({}).fetch()
   }
 }
+
+// Meteor感があるのが唯一ここだけ！すごい。
 export default bindReactiveData(todos, reactiveData);
