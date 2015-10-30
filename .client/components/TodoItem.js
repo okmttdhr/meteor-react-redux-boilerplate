@@ -54,7 +54,7 @@ export default class TodoItem extends Component {
           </label>
           <button
             className='destroy'
-            onClick={() => deleteTodo(todo._id)} />
+            onClick={() => deleteTodo(todo._id)}>x</button>
         </div>
       );
     }

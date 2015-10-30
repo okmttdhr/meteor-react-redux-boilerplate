@@ -40,7 +40,7 @@ function todos(state = initialState, action) {
   }
 }
 
-function reactiveData(){
+function reactiveData() {
   // そのまま返すと Object に変換されてしまっていたので {} に包んで返す
   return {
     array: Todos.find({}).fetch(),
