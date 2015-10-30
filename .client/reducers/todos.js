@@ -42,9 +42,7 @@ function todos(state = initialState, action) {
 }
 
 function reactiveData(){
-  return {
-    todos: Todos.find({}).fetch()
-  }
+  return Todos.find({}).fetch();
 }
 
 // Meteor感があるのが唯一ここだけ！すごい。
