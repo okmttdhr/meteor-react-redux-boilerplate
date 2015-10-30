@@ -31,43 +31,23 @@ export default class MainSection extends Component {
     this.setState({ filter });
   }
 
-  render() {
-    const { todos, actions } = this.props;
-    const { filter } = this.state;
-
-    const filteredTodos = todos.filter(TODO_FILTERS[filter]);
-    const markedCount = todos.reduce((count, todo) =>
-      todo.marked ? count + 1 : count,
-      0
-    );
-
-    return (
-      <section className='main'>
-        {this.renderToggleAll(markedCount)}
-        <ul className='todo-list'>
-          {filteredTodos.map(todo =>
-            <TodoItem key={todo._id} todo={todo} {...actions} />
-          )}
-        </ul>
-        {this.renderFooter(markedCount)}
-      </section>
-    );
-  }
-
-  renderToggleAll(markedCount) {
+  _renderToggleAll(markedCount) {
     const { todos, actions } = this.props;
     if (todos.length > 0) {
       return (
-        <input
-          className='toggle-all'
-          type='checkbox'
-          checked={markedCount === todos.length}
-          onChange={actions.markAll} />
+        <label>
+          toggle all
+          <input
+            className='toggle-all'
+            type='checkbox'
+            checked={markedCount === todos.length}
+            onChange={actions.markAll} />
+        </label>
       );
     }
   }
 
-  renderFooter(markedCount) {
+  _renderFooter(markedCount) {
     const { todos } = this.props;
     const { filter } = this.state;
     const unmarkedCount = todos.length - markedCount;
@@ -82,5 +62,28 @@ export default class MainSection extends Component {
           onShow={::this._show} />
       );
     }
+  }
+
+  render() {
+    const { todos, actions } = this.props;
+    const { filter } = this.state;
+
+    const filteredTodos = todos.filter(TODO_FILTERS[filter]);
+    const markedCount = todos.reduce((count, todo) =>
+      todo.marked ? count + 1 : count,
+      0
+    );
+
+    return (
+      <section className='main'>
+        {this._renderToggleAll(markedCount)}
+        <ul className='todo-list'>
+          {filteredTodos.map(todo =>
+            <TodoItem key={todo._id} todo={todo} {...actions} />
+          )}
+        </ul>
+        {this._renderFooter(markedCount)}
+      </section>
+    );
   }
 }

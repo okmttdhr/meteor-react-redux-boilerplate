@@ -7,6 +7,7 @@ function todos(state = initialState, action) {
 
   switch (action.type) {
   case ADD_TODO:
+    console.log('ADD_TODO');
     Todos.insert({
       completed: false,
       text: action.text

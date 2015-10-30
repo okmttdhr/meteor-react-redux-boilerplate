@@ -33,10 +33,11 @@ export class HomeView extends React.Component {
   }
 
   render () {
+    console.log(this.props.todos);
     return (
       <div className='container text-center'>
         <h1>Welcome to the React Redux Starter Kit</h1>
-        <button onClick={this.props.actions.increment}>Increment</button>
+        <button onClick={this.props.actions.increment}>Incrementtttttt</button>
         {this.props.counter}
         <TodoApp
           todos={this.props.todos}
