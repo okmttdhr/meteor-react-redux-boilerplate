@@ -19,7 +19,6 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  console.log(actionCreators);
   return {
     actions: bindActionCreators(actionCreators, dispatch),
   };
@@ -33,11 +32,11 @@ export class HomeView extends React.Component {
   }
 
   render () {
-    console.log(this.props.todos);
+    console.log(this.props);
     return (
       <div className='container text-center'>
         <h1>Welcome to the React Redux Starter Kit</h1>
-        <button onClick={this.props.actions.increment}>Incrementtttttt</button>
+        <button onClick={this.props.actions.increment}>Increment</button>
         {this.props.counter}
         <TodoApp
           todos={this.props.todos}
