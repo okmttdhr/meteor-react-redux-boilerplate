@@ -15,26 +15,25 @@ function todos(state = initialState, action) {
     return state;
 
   case DELETE_TODO:
-    Todos.remove(action.id)
+    Todos.remove(action.id);
     return state;
 
   case EDIT_TODO:
-    Todos.update(action.id, {$set: {text: action.text}})
+    Todos.update(action.id, {$set: {text: action.text}});
     return state;
 
   case MARK_TODO:
-    const todo = Todos.findOne(action.id)
-    Todos.update(action.id, {$set: {completed: !todo.completed}})
+    const todo = Todos.findOne(action.id);
+    Todos.update(action.id, {$set: {completed: !todo.completed}});
     return state;
 
   case MARK_ALL:
-    Todos.update({}, {$set: {completed: true}})
+    Todos.update({}, {$set: {completed: true}});
     return state;
 
   case CLEAR_MARKED:
-    Todos.update({}, {$set: {completed: false}})
+    Todos.update({}, {$set: {completed: false}});
     return state;
-
 
   default:
     return state;
@@ -42,7 +41,10 @@ function todos(state = initialState, action) {
 }
 
 function reactiveData(){
-  return Todos.find({}).fetch();
+  // そのまま返すと Object に変換されてしまっていたので {} に包んで返す
+  return {
+    array: Todos.find({}).fetch(),
+  };
 }
 
 // Meteor感があるのが唯一ここだけ！すごい。

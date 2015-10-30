@@ -15,16 +15,12 @@ export default function configureStore (initialState) {
 
   const middleware = applyMiddleware(thunk);
 
-  console.log(rootReducer);
-
   createStoreWithMiddleware = compose(
     middleware,
     reduxReactRouter({ routes, createHistory })
   );
 
   const store = createStoreWithMiddleware(createStore)(rootReducer, initialState);
-
-  console.log(store);
 
   return store;
 }

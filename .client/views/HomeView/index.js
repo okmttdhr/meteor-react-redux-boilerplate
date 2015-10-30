@@ -2,27 +2,33 @@ import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
+import TodoApp from '../../components/TodoApp'
+import * as TodoActions from '../../actions/TodoActions';
+
 const actionCreators = {
-  increment : () => ({ type : 'COUNTER_INCREMENT' })
+  increment : () => ({ type : 'COUNTER_INCREMENT' }),
+  ...TodoActions,
 };
 
-const mapStateToProps = (state) => {
-  console.log(state);
+function mapStateToProps(state) {
   return {
     routerState: state.router,
-    todos: state.todos,
+    todos: state.todos.array,
     counter: state.counter,
   };
-};
+}
 
-const mapDispatchToProps = (dispatch) => ({
-  actions: bindActionCreators(actionCreators, dispatch)
-});
+function mapDispatchToProps(dispatch) {
+  console.log(actionCreators);
+  return {
+    actions: bindActionCreators(actionCreators, dispatch),
+  };
+}
 
 export class HomeView extends React.Component {
   static propTypes = {
     actions: React.PropTypes.object,
-    todos: React.PropTypes.object,
+    todos: React.PropTypes.array,
     counter: React.PropTypes.number,
   }
 
@@ -32,7 +38,9 @@ export class HomeView extends React.Component {
         <h1>Welcome to the React Redux Starter Kit</h1>
         <button onClick={this.props.actions.increment}>Increment</button>
         {this.props.counter}
-        {JSON.stringify(this.props.todos)}
+        <TodoApp
+          todos={this.props.todos}
+          actions={this.props.actions}/>
       </div>
     );
   }

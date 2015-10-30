@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { ReduxRouter } from 'redux-router';
-
 import routes from '../routes';
-import App from './App';
 
 Meteor.subscribe('todos');
 
