@@ -1,20 +1,26 @@
 import React, { Component } from 'react';
-import App from './App';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import { todosReducer } from '../reducers';
-import { connectToMeteor } from 'meteoredux';
+import { ReduxRouter } from 'redux-router';
+
+import routes from '../routes';
+import App from './App';
 
 Meteor.subscribe('todos');
 
-const store = createStore(todosReducer);
-connectToMeteor(store);
-
 export default class Root extends Component {
+  static propTypes = {
+    store : React.PropTypes.object.isRequired,
+  }
+
   render() {
     return (
-      <Provider store={store}>
-        {() => <App />}
+      <Provider store={this.props.store}>
+        <div>
+          <ReduxRouter>
+            {routes}
+          </ReduxRouter>
+        </div>
       </Provider>
     );
   }

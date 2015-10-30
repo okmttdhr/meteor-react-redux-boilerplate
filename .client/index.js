@@ -1,10 +1,16 @@
 import React from 'react';
+import ReactDOM from 'react-dom'
+import { connectToMeteor } from 'meteoredux';
+
 import Root from './containers/Root';
-import 'todomvc-app-css/index.css';
+import configureStore from './store/configureStore';
+
+const store = configureStore(window.__INITIAL_STATE__);
+connectToMeteor(store);
 
 Template.body.onRendered(function(){
-  React.render(
-    <Root />,
+  ReactDOM.render(
+    <Root store={store} />,
     document.getElementById('root')
   )
 });
