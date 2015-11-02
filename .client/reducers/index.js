@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import { routerStateReducer } from 'redux-router';
-import todos from './todos';
+import todos from './Todos';
 import counter from './counter';
 
 export default combineReducers({

@@ -5,7 +5,7 @@ import {
   MARK_TODO,
   MARK_ALL,
   CLEAR_MARKED,
-} from '../constants/ActionTypes';
+} from '../../constants/ActionTypes';
 
 const initialState = {};
 
