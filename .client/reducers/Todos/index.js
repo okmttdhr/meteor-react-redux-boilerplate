@@ -5,44 +5,39 @@ import {
   MARK_TODO,
   MARK_ALL,
   CLEAR_MARKED,
-} from '../../constants/ActionTypes';
+} from '../../constants';
+import { createReducer } from '../../utils';
+
 
 const initialState = {};
 
-function todos(state = initialState, action) {
-
-  switch (action.type) {
-  case ADD_TODO:
+export default createReducer(initialState, {
+  [ADD_TODO]: (state, action) => {
     Todos.insert({
       completed: false,
       text: action.text
     });
     return state;
-
-  case DELETE_TODO:
+  },
+  [DELETE_TODO]: (state, action) => {
     Todos.remove(action.id);
     return state;
-
-  case EDIT_TODO:
+  },
+  [EDIT_TODO]: (state, action) => {
     Todos.update(action.id, {$set: {text: action.text}});
     return state;
-
-  case MARK_TODO:
+  },
+  [MARK_TODO]: (state, action) => {
     const todo = Todos.findOne(action.id);
     Todos.update(action.id, {$set: {completed: !todo.completed}});
     return state;
-
-  case MARK_ALL:
+  },
+  [MARK_ALL]: (state, action) => {
     Todos.update({}, {$set: {completed: true}});
     return state;
-
-  case CLEAR_MARKED:
+  },
+  [CLEAR_MARKED]: (state, action) => {
     Todos.update({}, {$set: {completed: false}});
     return state;
-
-  default:
-    return state;
-  }
-}
-
-export default todos;
+  },
+});

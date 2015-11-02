@@ -1,23 +1,29 @@
-import * as types from '../constants/ActionTypes';
+import {
+  ADD_TODO,
+  DELETE_TODO,
+  EDIT_TODO,
+  MARK_TODO,
+  MARK_ALL,
+  CLEAR_MARKED,
+} from '../constants';
 
 export function addTodo(text) {
-  console.log('addTodo');
   return {
-    type: types.ADD_TODO,
+    type: ADD_TODO,
     text
   };
 }
 
 export function deleteTodo(id) {
   return {
-    type: types.DELETE_TODO,
+    type: DELETE_TODO,
     id
   };
 }
 
 export function editTodo(id, text) {
   return {
-    type: types.EDIT_TODO,
+    type: EDIT_TODO,
     id,
     text
   };
@@ -25,19 +31,19 @@ export function editTodo(id, text) {
 
 export function markTodo(id) {
   return {
-    type: types.MARK_TODO,
+    type: MARK_TODO,
     id
   };
 }
 
 export function markAll() {
   return {
-    type: types.MARK_ALL
+    type: MARK_ALL
   };
 }
 
 export function clearMarked() {
   return {
-    type: types.CLEAR_MARKED
+    type: CLEAR_MARKED
   };
 }

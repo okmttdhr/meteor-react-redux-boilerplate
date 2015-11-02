@@ -1,7 +1,11 @@
 import React, { Component, PropTypes } from 'react';
 import TodoItem from './TodoItem';
 import Footer from './Footer';
-import { SHOW_ALL, SHOW_MARKED, SHOW_UNMARKED } from '../constants/TodoFilters';
+import {
+  SHOW_ALL,
+  SHOW_MARKED,
+  SHOW_UNMARKED,
+} from '../constants/TodoFilters';
 
 const TODO_FILTERS = {
   [SHOW_ALL]: () => true,
