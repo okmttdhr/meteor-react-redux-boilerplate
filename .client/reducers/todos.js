@@ -43,12 +43,6 @@ function todos(state = initialState, action) {
     Todos.update({}, {$set: {completed: false}});
     return state;
 
-  case 'TEST_ACTION':
-    console.log('TEST_ACTION');
-    return {
-      todos: action.items,
-    };
-
   default:
     return state;
   }
