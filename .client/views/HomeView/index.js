@@ -13,7 +13,6 @@ const actionCreators = {
 function mapStateToProps(state) {
   return {
     routerState: state.router,
-    todos: state.todos.array,
     counter: state.counter,
   };
 }
@@ -27,7 +26,6 @@ function mapDispatchToProps(dispatch) {
 export const HomeView = React.createClass({
   propTypes: {
     actions: React.PropTypes.object,
-    todos: React.PropTypes.array,
     counter: React.PropTypes.number,
   },
 
@@ -48,7 +46,7 @@ export const HomeView = React.createClass({
         {this.props.counter}
         {JSON.stringify(this.data.todos)}
         <TodoApp
-          todos={this.props.todos}
+          todos={this.data.todos}
           actions={this.props.actions}/>
       </div>
     );

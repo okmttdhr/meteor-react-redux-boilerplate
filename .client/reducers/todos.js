@@ -6,7 +6,6 @@ import {
   MARK_ALL,
   CLEAR_MARKED,
 } from '../constants/ActionTypes';
-import { bindReactiveData } from 'meteoredux'
 
 const initialState = {};
 
@@ -14,12 +13,10 @@ function todos(state = initialState, action) {
 
   switch (action.type) {
   case ADD_TODO:
-    console.log('ADD_TODO');
     Todos.insert({
       completed: false,
       text: action.text
     });
-    //We have not changed the state here, so we return original state.
     return state;
 
   case DELETE_TODO:
@@ -48,12 +45,4 @@ function todos(state = initialState, action) {
   }
 }
 
-function reactiveData() {
-  // そのまま返すと Object に変換されてしまっていたので {} に包んで返す
-  return {
-    array: Todos.find({}).fetch(),
-  };
-}
-
-// Meteor感があるのが唯一ここだけ！すごい。
-export default bindReactiveData(todos, reactiveData);
+export default todos;
