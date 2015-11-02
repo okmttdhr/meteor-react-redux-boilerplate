@@ -9,7 +9,6 @@ export default class TodoApp extends Component {
   };
 
   render() {
-    console.log(this.props);
     return (
       <div>
         <Header addTodo={this.props.actions.addTodo} />

@@ -1,4 +1,11 @@
-import { ADD_TODO, DELETE_TODO, EDIT_TODO, MARK_TODO, MARK_ALL, CLEAR_MARKED } from '../constants/ActionTypes';
+import {
+  ADD_TODO,
+  DELETE_TODO,
+  EDIT_TODO,
+  MARK_TODO,
+  MARK_ALL,
+  CLEAR_MARKED,
+} from '../constants/ActionTypes';
 import { bindReactiveData } from 'meteoredux'
 
 const initialState = {};
@@ -35,6 +42,12 @@ function todos(state = initialState, action) {
   case CLEAR_MARKED:
     Todos.update({}, {$set: {completed: false}});
     return state;
+
+  case 'TEST_ACTION':
+    console.log('TEST_ACTION');
+    return {
+      todos: action.items,
+    };
 
   default:
     return state;
