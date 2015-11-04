@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import * as TodoAction from '../../actions/Todo';
-import Todos from '../../components/Todos'
+import TodoApp from '../../components/TodoApp'
 import Header from '../../components/Header'
 
 const actionCreators = {
@@ -43,11 +43,11 @@ export const HomeView = React.createClass({
     return (
       <div className='container text-center'>
         <h1>Welcome to the React Redux Starter Kit</h1>
-        <button onClick={this.props.actions.increment}>Incrementttttttt</button>
+        <button onClick={this.props.actions.increment}>Increment</button>
         {this.props.counter}
         {JSON.stringify(this.data.todos)}
         <Header addTodo={this.props.actions.addTodo} />
-        <Todos
+        <TodoApp
           todos={this.data.todos}
           actions={this.props.actions} />
       </div>

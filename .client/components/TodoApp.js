@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import Todo from './Todo';
 
-const Todos = React.createClass({
+const TodoApp = React.createClass({
   propTypes: {
     todos: PropTypes.array.isRequired,
     actions: PropTypes.object.isRequired
@@ -22,4 +22,4 @@ const Todos = React.createClass({
   },
 });
 
-export default Todos;
+export default TodoApp;
