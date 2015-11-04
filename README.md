@@ -56,11 +56,47 @@ $ meteor
         └── todo.js
 ```
 
-In `.client` folder, almost same structure as <a href="https://github.com/davezuko/react-redux-starter-kit" target="_blank">react-redux-starter-kit</a>. But there are some differences.
+In `.client` folder, almost same structure as <a href="https://github.com/davezuko/react-redux-starter-kit" target="_blank">react-redux-starter-kit</a>. **You can develop Meteor application just like a usual Single Page Application with Webpack for the web**.
 
-## Models
+```bash
+# in .client folder
 
-You can use `Model` in `views` folder, here is example in `.client/views/HomeView`.
+├── actions
+│   └── Todo
+│       └── index.js
+├── components
+│   ├── Header.js
+│   ├── TodoApp.js
+│   ├── TodoEdit.js
+│   └── TodoItem.js
+├── constants
+│   └── index.js
+├── containers
+│   └── Root.js
+├── index.js
+├── layouts
+│   └── CoreLayout
+│       └── index.js
+├── package.json
+├── reducers
+│   ├── Todo
+│   │   └── index.js
+│   ├── counter.js
+│   └── index.js
+├── routes
+│   └── index.js
+├── server.js
+├── store
+│   └── configureStore.js
+├── utils
+│   └── index.js
+├── views
+│   └── HomeView
+│       └── index.js
+└── webpack.config.js
+```
+
+But there are some differences. You can use `Model` in React components, here is example in `.client/views/HomeView`.
 
 ```javascript
 mixins: [ReactMeteorData],
@@ -72,7 +108,7 @@ getMeteorData() {
 },
 ```
 
-Now you can read data with `this.data.todos` in React Component, and it's automatically reactive in all tabs by ReactMeteor. That's why I don't use `redux state` to get datas from MongoDB.
+Now you can read data with `this.data.todos` in React Component, and **it's automatically synced to all connected clients in realtime thanks to Meteor and ReactMeteor**. That's why I don't use `redux state` to get datas from MongoDB.
 
 And you can easily update MongoDB like below in `.client/reducers/Todo/index.js`.
 
