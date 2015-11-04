@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import * as TodoAction from '../../actions/Todo';
-import MainSection from '../../components/MainSection'
+import Todos from '../../components/Todos'
 import Header from '../../components/Header'
 
 const actionCreators = {
@@ -47,7 +47,7 @@ export const HomeView = React.createClass({
         {this.props.counter}
         {JSON.stringify(this.data.todos)}
         <Header addTodo={this.props.actions.addTodo} />
-        <MainSection
+        <Todos
           todos={this.data.todos}
           actions={this.props.actions} />
       </div>

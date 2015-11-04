@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
-import TodoItem from './TodoItem';
+import Todo from './Todo';
 
-const MainSection = React.createClass({
+const Todos = React.createClass({
   propTypes: {
     todos: PropTypes.array.isRequired,
     actions: PropTypes.object.isRequired
@@ -14,7 +14,7 @@ const MainSection = React.createClass({
       <section className='main'>
         <ul className='todo-list'>
           {todos.map(todo =>
-            <TodoItem key={todo._id} todo={todo} {...actions} />
+            <Todo key={todo._id} todo={todo} {...actions} />
           )}
         </ul>
       </section>
@@ -22,4 +22,4 @@ const MainSection = React.createClass({
   },
 });
 
-export default MainSection;
+export default Todos;
