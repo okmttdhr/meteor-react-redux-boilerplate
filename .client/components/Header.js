@@ -18,8 +18,7 @@ export default class Header extends Component {
         <h1>todos</h1>
         <TodoEdit
           newTodo={true}
-          onSave={::this._addTodo}
-          placeholder='What needs to be done?' />
+          onSave={::this._addTodo} />
       </header>
     );
   }

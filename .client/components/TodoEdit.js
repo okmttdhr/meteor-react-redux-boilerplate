@@ -5,7 +5,6 @@ export default class TodoEdit extends Component {
   static propTypes = {
     onSave: PropTypes.func.isRequired,
     text: PropTypes.string,
-    placeholder: PropTypes.string,
     editing: PropTypes.bool,
     newTodo: PropTypes.bool
   };
@@ -45,7 +44,6 @@ export default class TodoEdit extends Component {
           'new-todo': this.props.newTodo
         })}
         type='text'
-        placeholder={this.props.placeholder}
         autoFocus='true'
         value={this.state.text}
         onBlur={::this.handleBlur}
