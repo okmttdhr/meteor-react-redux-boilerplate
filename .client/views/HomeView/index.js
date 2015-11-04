@@ -2,8 +2,9 @@ import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import TodoApp from '../../components/TodoApp'
 import * as TodoAction from '../../actions/Todo';
+import MainSection from '../../components/MainSection'
+import Header from '../../components/Header'
 
 const actionCreators = {
   increment : () => ({ type : 'COUNTER_INCREMENT' }),
@@ -45,9 +46,10 @@ export const HomeView = React.createClass({
         <button onClick={this.props.actions.increment}>Incrementttttttt</button>
         {this.props.counter}
         {JSON.stringify(this.data.todos)}
-        <TodoApp
+        <Header addTodo={this.props.actions.addTodo} />
+        <MainSection
           todos={this.data.todos}
-          actions={this.props.actions}/>
+          actions={this.props.actions} />
       </div>
     );
   },
