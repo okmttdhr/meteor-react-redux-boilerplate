@@ -3,11 +3,6 @@ var webpack = require('webpack');
 
 module.exports = {
   devtool: 'eval',
-  //entry: [
-  //  'webpack-dev-server/client?http://localhost:3000',
-  //  'webpack/hot/only-dev-server',
-  //  './index'
-  //],
   entry: [
     './index'
   ],
@@ -15,10 +10,6 @@ module.exports = {
     path: path.join(__dirname, '..', 'client'),
     filename: 'bundle.js'
   },
-  //plugins: [
-  //  new webpack.HotModuleReplacementPlugin(),
-  //  new webpack.NoErrorsPlugin()
-  //],
   resolve: {
     extensions: ['', '.js']
   },

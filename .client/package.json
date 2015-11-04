@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "webpack --watch"
+    "compile": "$(npm bin)/webpack",
+    "build": "npm install && npm run compile",
+    "dev": "$(npm bin)/webpack --watch"
   },
   "repository": {
     "type": "git",
