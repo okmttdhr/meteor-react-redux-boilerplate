@@ -3,11 +3,11 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import TodoApp from '../../components/TodoApp'
-import * as TodoActions from '../../actions/TodoActions';
+import * as TodoAction from '../../actions/Todo';
 
 const actionCreators = {
   increment : () => ({ type : 'COUNTER_INCREMENT' }),
-  ...TodoActions,
+  ...TodoAction,
 };
 
 function mapStateToProps(state) {

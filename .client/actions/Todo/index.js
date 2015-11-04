@@ -5,7 +5,7 @@ import {
   MARK_TODO,
   MARK_ALL,
   CLEAR_MARKED,
-} from '../constants';
+} from '../../constants';
 
 export function addTodo(text) {
   return {
