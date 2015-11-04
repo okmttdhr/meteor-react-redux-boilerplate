@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 import TodoEdit from './TodoEdit';
 
-const Todo = React.createClass({
+const TodoItem = React.createClass({
   propTypes: {
     todo: PropTypes.object.isRequired,
     editTodo: PropTypes.func.isRequired,
@@ -60,4 +60,4 @@ const Todo = React.createClass({
   },
 });
 
-export default Todo;
+export default TodoItem;
