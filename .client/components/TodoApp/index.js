@@ -1,10 +1,10 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 import Todo from '../TodoItem';
 
 const TodoApp = React.createClass({
   propTypes: {
     todos: PropTypes.array.isRequired,
-    actions: PropTypes.object.isRequired
+    actions: PropTypes.object.isRequired,
   },
 
   render() {

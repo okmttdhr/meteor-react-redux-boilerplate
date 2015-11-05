@@ -3,7 +3,7 @@ import TodoEdit from '../TodoEdit';
 
 export default class TodoAdd extends Component {
   static propTypes = {
-    addTodo: PropTypes.func.isRequired
+    addTodo: PropTypes.func.isRequired,
   };
 
   _addTodo(text) {

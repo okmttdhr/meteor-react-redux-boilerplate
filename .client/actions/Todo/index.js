@@ -8,14 +8,14 @@ import {
 export function addTodo(text) {
   return {
     type: ADD_TODO,
-    text
+    text,
   };
 }
 
 export function deleteTodo(id) {
   return {
     type: DELETE_TODO,
-    id
+    id,
   };
 }
 
@@ -23,13 +23,13 @@ export function editTodo(id, text) {
   return {
     type: EDIT_TODO,
     id,
-    text
+    text,
   };
 }
 
 export function markTodo(id) {
   return {
     type: MARK_TODO,
-    id
+    id,
   };
 }

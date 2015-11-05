@@ -1,3 +1,4 @@
+/* global Todos */
 import {
   ADD_TODO,
   DELETE_TODO,
@@ -12,7 +13,7 @@ export default createReducer(initialState, {
   [ADD_TODO]: (state, action) => {
     Todos.insert({
       completed: false,
-      text: action.text
+      text: action.text,
     });
     return state;
   },

@@ -6,13 +6,13 @@ export default class TodoEdit extends Component {
     onSave: PropTypes.func.isRequired,
     text: PropTypes.string,
     editing: PropTypes.bool,
-    newTodo: PropTypes.bool
+    newTodo: PropTypes.bool,
   };
 
   constructor(props, context) {
     super(props, context);
     this.state = {
-      text: this.props.text || ''
+      text: this.props.text || '',
     };
   }
 
@@ -41,7 +41,7 @@ export default class TodoEdit extends Component {
       <input
         className={classnames({
           'edit': this.props.editing,
-          'new-todo': this.props.newTodo
+          'new-todo': this.props.newTodo,
         })}
         type='text'
         placeholder="Add Todo"

@@ -1,10 +1,11 @@
+/* global Todos ReactMeteorData */
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import * as TodoAction from '../../actions/Todo';
-import TodoApp from '../../components/TodoApp/index'
-import TodoAdd from '../../components/TodoAdd/index'
+import TodoApp from '../../components/TodoApp/index';
+import TodoAdd from '../../components/TodoAdd/index';
 
 const actionCreators = {
   ...TodoAction,

@@ -2,12 +2,13 @@
   "name": "todomvc",
   "version": "0.0.0",
   "description": "TodoMVC example for redux",
-  "main": "server.js",
+  "main": "",
   "scripts": {
-    "start": "node server.js",
+    "dev": "npm run dev",
     "compile": "$(npm bin)/webpack",
     "build": "npm install && npm run compile",
-    "dev": "$(npm bin)/webpack --watch"
+    "dev": "$(npm bin)/webpack --watch",
+    "eslint": "$(npm bin)/eslint ."
   },
   "repository": {
     "type": "git",

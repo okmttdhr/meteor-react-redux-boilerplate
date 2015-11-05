@@ -22,5 +22,10 @@ module.exports = {
       test: /\.css?$/,
       loaders: ['style', 'raw']
     }]
-  }
+  },
+  eslint: {
+    configFile: '../.eslintrc',
+    failOnError: false,
+    emitWarning: true,
+  },
 };

@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 import classnames from 'classnames';
 import TodoEdit from '../TodoEdit';
 
@@ -7,12 +7,12 @@ const TodoItem = React.createClass({
     todo: PropTypes.object.isRequired,
     editTodo: PropTypes.func.isRequired,
     deleteTodo: PropTypes.func.isRequired,
-    markTodo: PropTypes.func.isRequired
+    markTodo: PropTypes.func.isRequired,
   },
 
   getInitialState() {
     return {
-      editing: false
+      editing: false,
     };
   },
 
@@ -35,7 +35,7 @@ const TodoItem = React.createClass({
     return (
       <li className={classnames({
         completed: todo.marked,
-        editing: this.state.editing
+        editing: this.state.editing,
       })}>
         {this.state.editing ?
           <TodoEdit

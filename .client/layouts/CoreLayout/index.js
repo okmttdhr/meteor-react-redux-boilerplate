@@ -2,7 +2,7 @@ import React from 'react';
 
 export default class CoreLayout extends React.Component {
   static propTypes = {
-    children : React.PropTypes.element
+    children : React.PropTypes.element,
   }
 
   render () {
