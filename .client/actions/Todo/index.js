@@ -3,7 +3,7 @@ import {
   DELETE_TODO,
   EDIT_TODO,
   MARK_TODO,
-} from '../../constants';
+} from 'constants';
 
 export function addTodo(text) {
   return {

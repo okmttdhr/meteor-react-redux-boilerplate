@@ -3,9 +3,9 @@ import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import * as TodoAction from '../../actions/Todo';
-import TodoApp from '../../components/TodoApp/index';
-import TodoAdd from '../../components/TodoAdd/index';
+import * as TodoAction from 'actions/Todo';
+import TodoApp from 'components/TodoApp';
+import TodoAdd from 'components/TodoAdd';
 
 const actionCreators = {
   ...TodoAction,

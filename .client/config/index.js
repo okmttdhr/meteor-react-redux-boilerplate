@@ -19,9 +19,15 @@ config.set('globals', {
 // ------------------------------------
 // Project
 // ------------------------------------
+
+// project root
 config.set('path_project', path.resolve(__dirname, '../../'));
-config.set('dir_src',  '');
-config.set('dir_dist', path.join(__dirname, '..', 'client'));
+
+// .client
+config.set('dir_src',  path.resolve(__dirname, '../'));
+
+// client
+config.set('dir_dist', path.join(__dirname, '../../', 'client'));
 
 // ------------------------------------
 // Utilities
@@ -40,5 +46,24 @@ const paths = (() => {
 })();
 
 config.set('utils_paths', paths);
+
+config.set('utils_aliases', [
+  'actions',
+  'components',
+  'constants',
+  'containers',
+  'dispatchers',
+  'layouts',
+  'models',
+  'reducers',
+  'routes',
+  'services',
+  'stores',
+  'store',
+  'images',
+  'styles',
+  'utils',
+  'views',
+].reduce((acc, x) => ((acc[x] = paths.src(x)) && acc), {}));
 
 export default config;

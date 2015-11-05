@@ -1,5 +1,5 @@
 import React, { PropTypes, Component } from 'react';
-import TodoEdit from '../TodoEdit';
+import TodoEdit from 'components/TodoEdit';
 
 export default class TodoAdd extends Component {
   static propTypes = {

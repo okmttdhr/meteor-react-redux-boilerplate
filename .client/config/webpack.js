@@ -10,7 +10,8 @@ const webpackConfig = {
     filename: 'bundle.js'
   },
   resolve: {
-    extensions: ['', '.js']
+    extensions: ['', '.js'],
+    alias: config.get('utils_aliases'),
   },
   plugins: [],
   module: {

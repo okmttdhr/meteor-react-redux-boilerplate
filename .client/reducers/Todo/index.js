@@ -4,8 +4,8 @@ import {
   DELETE_TODO,
   EDIT_TODO,
   MARK_TODO,
-} from '../../constants';
-import { createReducer } from '../../utils';
+} from 'constants';
+import { createReducer } from 'utils';
 
 const initialState = {};
 
