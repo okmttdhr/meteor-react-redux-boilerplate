@@ -4,7 +4,7 @@
   "description": "TodoMVC example for redux",
   "main": "",
   "scripts": {
-    "dev": "npm run dev",
+    "start": "npm run dev",
     "compile": "$(npm bin)/webpack",
     "build": "npm install && npm run compile",
     "dev": "$(npm bin)/webpack --watch",
@@ -32,8 +32,14 @@
     "redux-thunk": "^1.0.0"
   },
   "devDependencies": {
+    "babel": "^5.8.26",
     "babel-core": "^5.5.8",
+    "babel-eslint": "^4.1.4",
     "babel-loader": "^5.1.4",
+    "eslint": "^1.8.0",
+    "eslint-config-airbnb": "^0.1.0",
+    "eslint-loader": "^1.1.1",
+    "eslint-plugin-react": "^3.7.1",
     "node-libs-browser": "^0.5.2",
     "raw-loader": "^0.5.1",
     "react-hot-loader": "^1.2.7",
