@@ -56,7 +56,7 @@ $ meteor
         └── todo.js
 ```
 
-In `.client` folder, almost same structure as <a href="https://github.com/davezuko/react-redux-starter-kit" target="_blank">react-redux-starter-kit</a>. **You can develop Meteor application just like a usual Single Page Application with Webpack for the web**.
+In `.client` folder, almost same structure as <a href="https://github.com/davezuko/react-redux-starter-kit" target="_blank">react-redux-starter-kit</a>. **You can develop Meteor application just like an usual Single Page Application with Webpack for the web**.
 
 ```bash
 # in .client folder
@@ -81,7 +81,6 @@ In `.client` folder, almost same structure as <a href="https://github.com/davezu
 ├── reducers
 │   ├── Todo
 │   │   └── index.js
-│   ├── counter.js
 │   └── index.js
 ├── routes
 │   └── index.js

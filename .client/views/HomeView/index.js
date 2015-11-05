@@ -7,14 +7,12 @@ import TodoApp from '../../components/TodoApp'
 import Header from '../../components/Header'
 
 const actionCreators = {
-  increment : () => ({ type : 'COUNTER_INCREMENT' }),
   ...TodoAction,
 };
 
 function mapStateToProps(state) {
   return {
     routerState: state.router,
-    counter: state.counter,
   };
 }
 
@@ -27,7 +25,6 @@ function mapDispatchToProps(dispatch) {
 export const HomeView = React.createClass({
   propTypes: {
     actions: React.PropTypes.object,
-    counter: React.PropTypes.number,
   },
 
   mixins: [ReactMeteorData],
@@ -42,9 +39,7 @@ export const HomeView = React.createClass({
     console.log(this.props);
     return (
       <div className='container text-center'>
-        <h1>Welcome to the React Redux Starter Kit</h1>
-        <button onClick={this.props.actions.increment}>Increment</button>
-        {this.props.counter}
+        <h1>Meteor React Redux Boilerplate</h1>
         {JSON.stringify(this.data.todos)}
         <Header addTodo={this.props.actions.addTodo} />
         <TodoApp
