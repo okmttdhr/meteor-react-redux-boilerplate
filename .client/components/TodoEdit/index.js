@@ -44,6 +44,7 @@ export default class TodoEdit extends Component {
           'new-todo': this.props.newTodo
         })}
         type='text'
+        placeholder="Add Todo"
         autoFocus='true'
         value={this.state.text}
         onBlur={::this.handleBlur}

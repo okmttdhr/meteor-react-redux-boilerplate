@@ -3,8 +3,8 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import * as TodoAction from '../../actions/Todo';
-import TodoApp from '../../components/TodoApp'
-import Header from '../../components/Header'
+import TodoApp from '../../components/TodoApp/index'
+import TodoAdd from '../../components/TodoAdd/index'
 
 const actionCreators = {
   ...TodoAction,
@@ -39,12 +39,12 @@ export const HomeView = React.createClass({
     console.log(this.props);
     return (
       <div className='container text-center'>
-        <h1>Meteor React Redux Boilerplate</h1>
-        {JSON.stringify(this.data.todos)}
-        <Header addTodo={this.props.actions.addTodo} />
+        <h1>Meteor React Redux Boilerplateaaaaa</h1>
+        <TodoAdd addTodo={this.props.actions.addTodo} />
         <TodoApp
           todos={this.data.todos}
           actions={this.props.actions} />
+        {JSON.stringify(this.data.todos)}
       </div>
     );
   },

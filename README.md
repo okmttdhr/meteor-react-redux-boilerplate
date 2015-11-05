@@ -65,7 +65,7 @@ In `.client` folder, almost same structure as <a href="https://github.com/davezu
 │   └── Todo
 │       └── index.js
 ├── components
-│   ├── Header.js
+│   ├── TodoAdd.js
 │   ├── TodoApp.js
 │   ├── TodoEdit.js
 │   └── TodoItem.js
