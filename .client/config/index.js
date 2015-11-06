@@ -1,19 +1,23 @@
 process.env.NODE_ENV = (process.env.NODE_ENV || 'development').trim();
 
 import path from 'path';
+import { argv } from 'yargs';
 
 const config = new Map();
 
 // ------------------------------------
 // Environment
 // ------------------------------------
+config.set('env', process.env.NODE_ENV);
 config.set('globals', {
-  'process.env': {
-    NODE_ENV: JSON.stringify(config.get('env')),
+  'process.env'  : {
+    'NODE_ENV' : JSON.stringify(config.get('env'))
   },
-  NODE_ENV: config.get('env'),
-  __DEV__: config.get('env') === 'development',
-  __PROD__: config.get('env') === 'production',
+  'NODE_ENV'     : config.get('env'),
+  '__DEV__'      : config.get('env') === 'development',
+  '__PROD__'     : config.get('env') === 'production',
+  '__DEBUG__'    : config.get('env') === 'development' && !argv.no_debug,
+  '__DEBUG_NW__' : !!argv.nw
 });
 
 // ------------------------------------

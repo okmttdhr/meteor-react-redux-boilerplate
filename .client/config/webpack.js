@@ -1,3 +1,4 @@
+import webpack from 'webpack';
 import config  from './index';
 
 const globals = config.get('globals');
@@ -13,7 +14,9 @@ const webpackConfig = {
     extensions: ['', '.js'],
     alias: config.get('utils_aliases'),
   },
-  plugins: [],
+  plugins: [
+    new webpack.DefinePlugin(config.get('globals')),
+  ],
   module: {
     preLoaders: [
       {

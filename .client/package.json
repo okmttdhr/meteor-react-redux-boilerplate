@@ -1,25 +1,26 @@
 {
-  "name": "todomvc",
+  "name": "meteor-react-redux-boilerplate",
   "version": "0.0.0",
-  "description": "TodoMVC example for redux",
+  "description": "https://github.com/okmttdhr/meteor-react-redux-boilerplate",
   "main": "",
   "scripts": {
     "start": "npm run dev",
-    "compile": "$(npm bin)/webpack",
+    "compile": "$(npm bin)/webpack --progress",
     "build": "npm install && npm run compile",
-    "dev": "$(npm bin)/webpack --watch",
+    "dev": "NODE_ENV=development $(npm bin)/webpack --watch --progress",
+    "dev:nw": "npm run dev -- --nw",
     "eslint": "$(npm bin)/eslint ."
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gaearon/redux.git"
+    "url": "https://github.com/okmttdhr/meteor-react-redux-boilerplate.git"
   },
   "keywords": [],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gaearon/redux/issues"
+    "url": "https://github.com/okmttdhr/meteor-react-redux-boilerplate/issues"
   },
-  "homepage": "https://github.com/gaearon/redux#readme",
+  "homepage": "https://github.com/okmttdhr/meteor-react-redux-boilerplate#readme",
   "dependencies": {
     "classnames": "^2.1.2",
     "history": "^1.13.0",
@@ -43,11 +44,12 @@
     "node-libs-browser": "^0.5.2",
     "raw-loader": "^0.5.1",
     "react-hot-loader": "^1.2.7",
+    "redux-devtools": "3.0.0-beta-3",
+    "redux-devtools-dock-monitor": "^1.0.0-beta-3",
+    "redux-devtools-log-monitor": "^1.0.0-beta-3",
     "style-loader": "^0.12.3",
     "webpack": "^1.9.11",
     "webpack-dev-server": "^1.9.0",
-    "redux-devtools": "3.0.0-beta-3",
-    "redux-devtools-dock-monitor": "^1.0.0-beta-3",
-    "redux-devtools-log-monitor": "^1.0.0-beta-3"
+    "yargs": "^3.18.0"
   }
 }
