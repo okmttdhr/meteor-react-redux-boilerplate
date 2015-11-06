@@ -4,7 +4,7 @@
   "description": "https://github.com/okmttdhr/meteor-react-redux-boilerplate",
   "main": "",
   "scripts": {
-    "start": "npm run dev",
+    "start": "npm run dev:nw",
     "compile": "$(npm bin)/webpack --progress",
     "build": "npm install && npm run compile",
     "dev": "NODE_ENV=development $(npm bin)/webpack --watch --progress",

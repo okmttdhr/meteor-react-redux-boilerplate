@@ -33,7 +33,7 @@ $ meteor
 ## Development
 
 ```bash
-$ cd .client/ && npm run dev
+$ cd .client/ && npm start
 ```
 
 open a new tab and
