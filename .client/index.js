@@ -5,7 +5,9 @@ import Root from 'containers/Root';
 
 Template.body.onRendered(function() {
   ReactDOM.render(
-    <Root/>,
+    <Root
+      debug={true}
+      debugExternal={true}/>,
     document.getElementById('root')
   );
 });

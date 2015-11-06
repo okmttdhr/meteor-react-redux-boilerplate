@@ -1,4 +1,4 @@
-# Meteor React Redux Boilerplate
+# [Meteor React Redux Boilerplate](https://github.com/okmttdhr/meteor-react-redux-boilerplate)
 
 A boilerplate to use React + Redux with Meteor.
 
