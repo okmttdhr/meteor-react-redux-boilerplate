@@ -6,13 +6,14 @@
   "scripts": {
     "start": "npm run dev:nw",
     "compile": "$(npm bin)/webpack --progress",
-    "build": "npm install && npm run compile",
+    "build": "npm install && cd node_modules && npm run symbolic && cd ../ && npm run compile",
     "dev": "NODE_ENV=development $(npm bin)/webpack --watch --progress",
     "dev:nw": "npm run dev -- --nw",
+    "test": "npm run test:unit",
     "test:unit": "$(npm bin)/mocha --recursive --compilers js:espower-babel/guess ./test",
     "test:unit:watch": "$(npm bin)/mocha --recursive --watch --compilers js:espower-babel/guess ./test",
     "eslint": "$(npm bin)/eslint .",
-    "symbolic": "cd node_modules/ && ln -s ../../.client dir_src && cd ../"
+    "symbolic": "ln -s ../../.client dir_src"
   },
   "directories": {
     "test": ".client/test/"

@@ -6,7 +6,7 @@ import {
   EDIT_TODO,
   MARK_TODO,
 } from 'dir_src/constants';
-import { createMockStore } from '../helper';
+import { createMockStore } from 'dir_src/test/helper';
 import * as TodosAction from 'dir_src/actions/Todo';
 
 describe('actionCreators.todo', ()=> {

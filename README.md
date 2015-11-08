@@ -23,20 +23,31 @@ Inspired from <a href="https://github.com/davezuko/react-redux-starter-kit" targ
 
 # Getting Started
 
+## For the first time
+
+At `.client` directory
+
 ```bash
-$ git clone https://github.com/okmttdhr/meteor-react-redux-boilerplate.git
-$ cd meteor-react-redux-example
-$ cd .client/ && npm run build && cd ../
+$ npm run build
+```
+
+## Run
+
+At root directory
+
+```bash
 $ meteor
 ```
 
 ## Development
 
+At `.client` directory
+
 ```bash
-$ cd .client/ && npm start
+$ npm start
 ```
 
-open a new tab and
+Open a new tab and run `meteor` at root directory
 
 ```bash
 $ meteor
