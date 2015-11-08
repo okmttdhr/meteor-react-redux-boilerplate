@@ -11,7 +11,8 @@
     "dev:nw": "npm run dev -- --nw",
     "test:unit": "$(npm bin)/mocha --recursive --compilers js:espower-babel/guess ./test",
     "test:unit:watch": "$(npm bin)/mocha --recursive --watch --compilers js:espower-babel/guess ./test",
-    "eslint": "$(npm bin)/eslint ."
+    "eslint": "$(npm bin)/eslint .",
+    "symbolic": "cd node_modules/ && ln -s ../../.client dir_src && cd ../"
   },
   "directories": {
     "test": ".client/test/"

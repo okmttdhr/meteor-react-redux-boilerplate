@@ -11,13 +11,13 @@ const config = new Map();
 config.set('env', process.env.NODE_ENV);
 config.set('globals', {
   'process.env'  : {
-    'NODE_ENV' : JSON.stringify(config.get('env'))
+    'NODE_ENV' : JSON.stringify(config.get('env')),
   },
   'NODE_ENV'     : config.get('env'),
   '__DEV__'      : config.get('env') === 'development',
   '__PROD__'     : config.get('env') === 'production',
   '__DEBUG__'    : config.get('env') === 'development' && !argv.no_debug,
-  '__DEBUG_NW__' : !!argv.nw
+  '__DEBUG_NW__' : !!argv.nw,
 });
 
 // ------------------------------------
@@ -32,6 +32,9 @@ config.set('dir_src',  path.resolve(__dirname, '../'));
 
 // client
 config.set('dir_dist', path.join(__dirname, '../../', 'client'));
+
+// test
+config.set('dir_test', path.join(__dirname, '../test'));
 
 // ------------------------------------
 // Utilities
