@@ -4,7 +4,7 @@ import {
   DELETE_TODO,
   EDIT_TODO,
   MARK_TODO,
-} from 'constants';
+} from 'dir_src/constants';
 import { createReducer } from 'utils';
 
 const initialState = {};

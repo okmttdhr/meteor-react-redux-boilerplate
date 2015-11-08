@@ -57,7 +57,6 @@ config.set('utils_paths', paths);
 config.set('utils_aliases', [
   'actions',
   'components',
-  'constants',
   'containers',
   'dispatchers',
   'layouts',

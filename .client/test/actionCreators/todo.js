@@ -5,9 +5,9 @@ import {
   DELETE_TODO,
   EDIT_TODO,
   MARK_TODO,
-} from 'constants';
+} from 'dir_src/constants';
 import { createMockStore } from '../helper';
-import * as TodosAction from '../../actions/Todo';
+import * as TodosAction from 'dir_src/actions/Todo';
 
 describe('actionCreators.todo', ()=> {
   it('TodosAction.addTodo', (done)=> {
