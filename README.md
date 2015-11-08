@@ -53,6 +53,33 @@ Open a new tab and run `meteor` at root directory
 $ meteor
 ```
 
+
+
+# Usage
+
+## root directory
+
+### `meteor`
+
+## `.client` directory
+
+### `npm start`
+
+### `npm run build`
+
+### `npm run dev`
+
+### `npm run dev:nw`
+
+### `npm test`
+
+#### `npm run test:unit`
+#### `npm run test:unit:watch`
+
+### `npm run eslint`
+
+
+
 # Structure
 
 ```bash
