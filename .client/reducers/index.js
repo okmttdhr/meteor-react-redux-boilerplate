@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import { routerStateReducer } from 'redux-router';
-import todo from 'reducers/Todo';
+import todo from 'dir_src/reducers/Todo';
 
 export default combineReducers({
   router: routerStateReducer,

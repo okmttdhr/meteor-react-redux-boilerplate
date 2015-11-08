@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import classnames from 'classnames';
-import TodoEdit from 'components/TodoEdit';
+import TodoEdit from 'dir_src/components/TodoEdit';
 
 const TodoItem = React.createClass({
   propTypes: {

@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import Todo from 'components/TodoItem';
+import Todo from 'dir_src/components/TodoItem';
 
 const TodoApp = React.createClass({
   propTypes: {

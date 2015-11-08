@@ -1,7 +1,7 @@
 /* global Template */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Root from 'containers/Root';
+import Root from 'dir_src/containers/Root';
 
 Template.body.onRendered(function() {
   ReactDOM.render(

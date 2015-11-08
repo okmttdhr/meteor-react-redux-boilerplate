@@ -2,10 +2,10 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { ReduxRouter } from 'redux-router';
-import routes from 'routes';
-import configureStore from 'store/configureStore';
+import routes from 'dir_src/routes';
+import configureStore from 'dir_src/store/configureStore';
 import DevTools from './DevTools';
-import { createDevToolsWindow } from '../utils';
+import { createDevToolsWindow } from 'dir_src/utils';
 
 Meteor.subscribe('todos');
 const store = configureStore(window.__INITIAL_STATE__);

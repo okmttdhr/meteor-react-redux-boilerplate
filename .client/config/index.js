@@ -55,21 +55,22 @@ const paths = (() => {
 config.set('utils_paths', paths);
 
 config.set('utils_aliases', [
-  'actions',
-  'components',
-  'containers',
-  'dispatchers',
-  'layouts',
-  'models',
-  'reducers',
-  'routes',
-  'services',
-  'stores',
-  'store',
-  'images',
-  'styles',
-  'utils',
-  'views',
+  // 'actions',
+  // 'components',
+  // 'constants',
+  // 'containers',
+  // 'dispatchers',
+  // 'layouts',
+  // 'models',
+  // 'reducers',
+  // 'routes',
+  // 'services',
+  // 'stores',
+  // 'store',
+  // 'images',
+  // 'styles',
+  // 'utils',
+  // 'views',
 ].reduce((acc, x) => ((acc[x] = paths.src(x)) && acc), {}));
 
 export default config;
