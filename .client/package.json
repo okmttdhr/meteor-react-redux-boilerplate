@@ -9,7 +9,12 @@
     "build": "npm install && npm run compile",
     "dev": "NODE_ENV=development $(npm bin)/webpack --watch --progress",
     "dev:nw": "npm run dev -- --nw",
+    "test:unit": "$(npm bin)/mocha --recursive --compilers js:espower-babel/guess ./test",
+    "test:unit:watch": "$(npm bin)/mocha --recursive --watch --compilers js:espower-babel/guess ./test",
     "eslint": "$(npm bin)/eslint ."
+  },
+  "directories": {
+    "test": ".client/test/"
   },
   "repository": {
     "type": "git",
@@ -41,7 +46,10 @@
     "eslint-config-airbnb": "^0.1.0",
     "eslint-loader": "^1.1.1",
     "eslint-plugin-react": "^3.7.1",
+    "espower-babel": "^3.3.0",
+    "mocha": "^2.3.3",
     "node-libs-browser": "^0.5.2",
+    "power-assert": "^1.1.0",
     "raw-loader": "^0.5.1",
     "react-hot-loader": "^1.2.7",
     "redux-devtools": "3.0.0-beta-3",
