@@ -9,7 +9,7 @@ import {
 import { createMockStore } from '../helper';
 import * as TodosAction from '../../actions/Todo';
 
-describe('actionCreators.todos', ()=> {
+describe('actionCreators.todo', ()=> {
   it('TodosAction.addTodo', (done)=> {
     const store = createMockStore({}, (dispatchedAction, dispatchedCount)=> {
       assert(dispatchedAction.type === ADD_TODO);
