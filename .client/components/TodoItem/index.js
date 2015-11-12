@@ -34,6 +34,7 @@ const TodoItem = React.createClass({
 
     return (
       <li className={classnames({
+        TodoItem: true,
         completed: todo.marked,
         editing: this.state.editing,
       })}>

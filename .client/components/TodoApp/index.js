@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import Todo from 'dir_src/components/TodoItem';
+import TodoItem from 'dir_src/components/TodoItem';
 
 const TodoApp = React.createClass({
   propTypes: {
@@ -9,15 +9,14 @@ const TodoApp = React.createClass({
 
   render() {
     const { todos, actions } = this.props;
-
     return (
-      <section className='main'>
+      <div className='TodoApp'>
         <ul className='todo-list'>
           {todos.map(todo =>
-            <Todo key={todo._id} todo={todo} {...actions} />
+            <TodoItem key={todo._id} todo={todo} {...actions} />
           )}
         </ul>
-      </section>
+      </div>
     );
   },
 });
