@@ -1,4 +1,5 @@
 import React from 'react';
+import 'dir_src/styles/core.scss';
 
 export default class CoreLayout extends React.Component {
   static propTypes = {

@@ -37,10 +37,9 @@ export const HomeView = React.createClass({
   },
 
   render () {
-    console.log(this.props);
     return (
-      <div className='container text-center'>
-        <h1>Meteor React Redux Boilerplateaaaaa</h1>
+      <div className='HomeView'>
+        <h1>Meteor React Redux Boilerplate</h1>
         <TodoAdd addTodo={this.props.actions.addTodo} />
         <TodoApp
           todos={this.data.todos}
