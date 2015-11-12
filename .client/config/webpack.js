@@ -1,14 +1,14 @@
 import webpack from 'webpack';
-import config  from './index';
+import config from './index';
 
 const globals = config.get('globals');
-const paths   = config.get('utils_paths');
+const paths = config.get('utils_paths');
 
 const webpackConfig = {
   entry: './index',
   output: {
     path: paths.project(config.get('dir_dist')),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   resolve: {
     extensions: ['', '.js'],
@@ -33,7 +33,7 @@ const webpackConfig = {
       },
       {
         test: /\.scss$/,
-        loaders: ['style', 'css', 'sass']
+        loaders: ['style', 'css', 'sass'],
       },
     ],
   },

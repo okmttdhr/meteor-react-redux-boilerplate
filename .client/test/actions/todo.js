@@ -5,7 +5,7 @@ import * as TodoAction from 'dir_src/actions/Todo';
 
 describe('actions.Todo', ()=> {
   it('TodoAction.ADD_TODO', (done)=> {
-    const store = createMockStore({}, (dispatchedAction, dispatchedCount)=> {
+    const store = createMockStore({}, (dispatchedAction)=> {
       assert(dispatchedAction.type === ADD_TODO);
       assert(dispatchedAction.text === 'text');
       done();

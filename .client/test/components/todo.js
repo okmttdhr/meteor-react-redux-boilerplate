@@ -11,26 +11,24 @@ function renderWithProps (props = {}) {
 describe('components.TodoApp', function () {
   let _rendered;
   let _props;
-  let _spies;
   setUp();
 
   beforeEach(function () {
-    _spies = {};
     _props = {
       todos: todoMock.item,
       actions: '',
     };
 
-    _rendered  = renderWithProps(_props);
+    _rendered = renderWithProps(_props);
   });
 
   it('Should include an <TodoApp>.', function () {
     const TodoAppDom = TestUtils.scryRenderedDOMComponentsWithClass(_rendered, 'TodoApp');
-    assert(TodoAppDom.length === 1)
+    assert(TodoAppDom.length === 1);
   });
 
   it('Should include an <TodoItem>.', function () {
     const TodoItem = TestUtils.scryRenderedDOMComponentsWithClass(_rendered, 'TodoItem');
-    assert(TodoItem.length > 0)
+    assert(TodoItem.length > 0);
   });
 });

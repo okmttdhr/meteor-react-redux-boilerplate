@@ -3,15 +3,15 @@ export const todoMock = {
     {
       '_id': '1',
       'completed': false,
-      'text': 'aaa'
+      'text': 'aaa',
     }, {
       '_id': '2',
       'completed': false,
-      'text': 'bbb'
+      'text': 'bbb',
     }, {
       '_id': '3',
       'completed': true,
-      'text': 'ccc'
+      'text': 'ccc',
     },
   ],
 };

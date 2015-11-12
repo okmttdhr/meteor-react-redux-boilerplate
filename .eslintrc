@@ -1,10 +1,15 @@
 {
   "extends": "airbnb",
   "globals": {
-    "__DEV__"      : false,
-    "__PROD__"     : false,
-    "__DEBUG__"    : false,
-    "__DEBUG_NW__" : false
+    "__DEV__": false,
+    "__PROD__": false,
+    "__DEBUG__": false,
+    "__DEBUG_NW__": false,
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true
   },
   "rules": {
     "key-spacing": [0, {

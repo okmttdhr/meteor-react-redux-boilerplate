@@ -28,7 +28,7 @@ config.set('globals', {
 config.set('path_project', path.resolve(__dirname, '../../'));
 
 // .client
-config.set('dir_src',  path.resolve(__dirname, '../'));
+config.set('dir_src', path.resolve(__dirname, '../'));
 
 // client
 config.set('dir_dist', path.join(__dirname, '../../', 'client'));
