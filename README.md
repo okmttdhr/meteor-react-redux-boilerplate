@@ -14,7 +14,7 @@
 * <a href="https://github.com/rackt/redux" target="_blank">Redux</a>
 * <a href="https://github.com/babel/babel" target="_blank">Babel</a>
 * <a href="https://github.com/webpack/webpack" target="_blank">Webpack</a>
-* <a href="https://mochajs.org/" target="_blank">Mocha</a>
+* <a href="https://github.com/mochajs/mocha" target="_blank">mochajs/mocha</a>
 
 
 
