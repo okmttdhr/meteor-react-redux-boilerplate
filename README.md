@@ -1,8 +1,10 @@
 # [Meteor React Redux Boilerplate](https://github.com/okmttdhr/meteor-react-redux-boilerplate)
 
-**A boilerplate to use React + Redux with Meteor.** Inspired from <a href="https://github.com/davezuko/react-redux-starter-kit" target="_blank">react-redux-starter-kit</a> and <a href="https://github.com/zhongqf/meteor-react-redux-example" target="_blank">meteor-react-redux-example</a>.
+**A boilerplate to use React + Redux with Meteor.** <a href="http://meteor-react-redux-boilerplate.meteor.com/" target="_blank">Website here</a>.
 
-<a href="http://meteor-react-redux-boilerplate.meteor.com/" target="_blank">Website here</a>.
+Inspired from <a href="https://github.com/davezuko/react-redux-starter-kit" target="_blank">react-redux-starter-kit</a> and <a href="https://github.com/zhongqf/meteor-react-redux-example" target="_blank">meteor-react-redux-example</a>.
+
+
 
 
 
@@ -58,7 +60,7 @@ $ meteor
 
 ### `meteor`
 
-## `.client` directory
+## .client directory
 
 ### `npm start`
 
@@ -119,7 +121,6 @@ In `.client` folder, almost same structure as <a href="https://github.com/davezu
 ├── layouts
 │   └── CoreLayout
 │       └── index.js
-├── package.json
 ├── reducers
 │   ├── Todo
 │   │   └── index.js
@@ -134,6 +135,7 @@ In `.client` folder, almost same structure as <a href="https://github.com/davezu
 ├── views
 │   └── HomeView
 │       └── index.js
+├── package.json
 └── webpack.config.js
 ```
 
