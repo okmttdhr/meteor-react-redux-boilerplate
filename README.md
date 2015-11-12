@@ -74,11 +74,18 @@ $ meteor
 ### `npm test`
 
 #### `npm run test:unit`
+
 #### `npm run test:unit:watch`
 
 ### `npm run eslint`
 
+## Config
 
+Alias available like this
+
+```javascript
+import someAction from 'dir_src/actions/someAction';
+```
 
 # Structure
 

@@ -1,6 +1,6 @@
 import assert from 'power-assert';
 
-describe('mochaのテスト', ()=> {
+describe('mocha', ()=> {
   it('テストが動作している', ()=> {
     assert(true);
   });

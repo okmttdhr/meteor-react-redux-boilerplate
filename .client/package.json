@@ -4,7 +4,7 @@
   "description": "https://github.com/okmttdhr/meteor-react-redux-boilerplate",
   "main": "",
   "scripts": {
-    "postinstall" : "cd node_modules && node -e \"var srcpath='../../.client';var dstpath='dir_src';var fs=require('fs');fs.exists(dstpath,function(exists){if(!exists){fs.symlinkSync(srcpath,dstpath,'dir');}});\"",
+    "postinstall": "cd node_modules && node -e \"var srcpath='../../.client';var dstpath='dir_src';var fs=require('fs');fs.exists(dstpath,function(exists){if(!exists){fs.symlinkSync(srcpath,dstpath,'dir');}});\"",
     "start": "npm run dev:nw",
     "compile": "$(npm bin)/webpack --progress",
     "build": "npm install && npm run compile",
@@ -50,6 +50,7 @@
     "eslint-plugin-react": "^3.7.1",
     "espower-babel": "^3.3.0",
     "mocha": "^2.3.3",
+    "mongodb": "^2.0.48",
     "node-libs-browser": "^0.5.2",
     "power-assert": "^1.1.0",
     "raw-loader": "^0.5.1",
