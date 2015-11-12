@@ -1,8 +1,8 @@
 # [Meteor React Redux Boilerplate](https://github.com/okmttdhr/meteor-react-redux-boilerplate)
 
-A boilerplate to use React + Redux with Meteor.
+A boilerplate to use React + Redux with Meteor. Inspired from <a href="https://github.com/davezuko/react-redux-starter-kit" target="_blank">react-redux-starter-kit</a> and <a href="https://github.com/zhongqf/meteor-react-redux-example" target="_blank">meteor-react-redux-example</a>.
 
-Inspired from <a href="https://github.com/davezuko/react-redux-starter-kit" target="_blank">react-redux-starter-kit</a> and <a href="https://github.com/zhongqf/meteor-react-redux-example" target="_blank">meteor-react-redux-example</a>.
+<a href="http://meteor-react-redux-boilerplate.meteor.com/" target="_blank">Website here</a>.
 
 
 
