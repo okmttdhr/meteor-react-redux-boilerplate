@@ -189,11 +189,23 @@ const HomeView = React.createClass({
 
 Now you can read data with `this.data.todos` in React Component, and **it's automatically synced to all connected clients in realtime thanks to Meteor and ReactMeteor**. That's why I don't use `redux state` in case getting datas from MongoDB.
 
-And you can easily update MongoDB like below in `.client/reducers/Todo/index.js`.
+And you can easily update MongoDB like below.
 
 ```javascript
 Todos.update(action.id, {$set: {text: action.text}});
 ```
+
+
+## Future
+
+- [ ] test MongoDB
+- [ ] delete autopublish
+- [ ] delete insecure
+- [ ] add Meteor accounts system
+- [ ] server side rendering
+- [ ] improve npm command
+- [ ] improve deploy and hosting
+
 
 
 
