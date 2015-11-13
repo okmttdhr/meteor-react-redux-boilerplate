@@ -1,16 +1,16 @@
-import React, { Component, PropTypes } from 'react';
+import React from 'react';
 import classnames from 'classnames';
 
-export default class TodoEdit extends Component {
+export default class TodoEdit extends React.Component {
   static propTypes = {
-    onSave: PropTypes.func.isRequired,
-    text: PropTypes.string,
-    editing: PropTypes.bool,
-    newTodo: PropTypes.bool,
+    onSave: React.PropTypes.func.isRequired,
+    text: React.PropTypes.string,
+    editing: React.PropTypes.bool,
+    newTodo: React.PropTypes.bool,
   };
 
-  constructor(props, context) {
-    super(props, context);
+  constructor(props) {
+    super(props);
     this.state = {
       text: this.props.text || '',
     };

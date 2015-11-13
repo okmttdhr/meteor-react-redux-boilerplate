@@ -1,10 +1,14 @@
-import React, { PropTypes, Component } from 'react';
+import React from 'react';
 import TodoEdit from 'dir_src/components/TodoEdit';
 
-export default class TodoAdd extends Component {
+export default class TodoAdd extends React.Component {
   static propTypes = {
-    addTodo: PropTypes.func.isRequired,
+    addTodo: React.PropTypes.func.isRequired,
   };
+
+  constructor() {
+    super();
+  }
 
   _addTodo(text) {
     if (text.length !== 0) {

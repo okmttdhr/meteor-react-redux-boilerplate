@@ -1,11 +1,15 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import TodoItem from 'dir_src/components/TodoItem';
 
-const TodoApp = React.createClass({
-  propTypes: {
-    todos: PropTypes.array.isRequired,
-    actions: PropTypes.object.isRequired,
-  },
+export default class TodoApp extends React.Component {
+  static propTypes = {
+    todos: React.PropTypes.array.isRequired,
+    actions: React.PropTypes.object.isRequired,
+  }
+
+  constructor() {
+    super();
+  }
 
   render() {
     const { todos, actions } = this.props;
@@ -18,7 +22,5 @@ const TodoApp = React.createClass({
         </ul>
       </div>
     );
-  },
-});
-
-export default TodoApp;
+  }
+}

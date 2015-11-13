@@ -1,24 +1,25 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import classnames from 'classnames';
 import TodoEdit from 'dir_src/components/TodoEdit';
 
-const TodoItem = React.createClass({
-  propTypes: {
-    todo: PropTypes.object.isRequired,
-    editTodo: PropTypes.func.isRequired,
-    deleteTodo: PropTypes.func.isRequired,
-    completeTodo: PropTypes.func.isRequired,
-  },
+export default class TodoItem extends React.Component {
+  static propTypes = {
+    todo: React.PropTypes.object.isRequired,
+    editTodo: React.PropTypes.func.isRequired,
+    deleteTodo: React.PropTypes.func.isRequired,
+    completeTodo: React.PropTypes.func.isRequired,
+  }
 
-  getInitialState() {
-    return {
+  constructor() {
+    super();
+    this.state = {
       editing: false,
     };
-  },
+  }
 
   handleDoubleClick() {
     this.setState({ editing: true });
-  },
+  }
 
   handleSave(id, text) {
     if (text.length === 0) {
@@ -27,7 +28,7 @@ const TodoItem = React.createClass({
       this.props.editTodo(id, text);
     }
     this.setState({ editing: false });
-  },
+  }
 
   render() {
     const {todo, completeTodo, deleteTodo} = this.props;
@@ -58,7 +59,5 @@ const TodoItem = React.createClass({
           </div>}
       </li>
     );
-  },
-});
-
-export default TodoItem;
+  }
+}
