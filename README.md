@@ -194,3 +194,9 @@ And you can easily update MongoDB like below in `.client/reducers/Todo/index.js`
 ```javascript
 Todos.update(action.id, {$set: {text: action.text}});
 ```
+
+
+
+## License
+
+MIT
