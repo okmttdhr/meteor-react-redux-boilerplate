@@ -60,27 +60,30 @@ $ meteor
 
 ### `meteor`
 
+run your application at `localhost:3000`
+
 ## .client directory
 
 ### `npm start`
 
+watch your files with webpack with debug tool
+
 ### `npm run build`
 
-### `npm run dev`
+### `npm run deploy`
 
-### `npm run dev:nw`
+deploy your application to the web
 
 ### `npm test`
 
-#### `npm run test:unit`
-
-#### `npm run test:unit:watch`
+test your application with mocha
 
 ### `npm run eslint`
 
+
 ## Config
 
-Alias available like this
+alias available like this
 
 ```javascript
 import someAction from 'dir_src/actions/someAction';
@@ -89,12 +92,11 @@ import someAction from 'dir_src/actions/someAction';
 # Structure
 
 ```bash
-├── README.md
+├── index.html
 ├── .client           # client application code
 ├── .meteor
 ├── client
 │   └── bundle.js     # bundled file by webpack
-├── index.html
 └── lib
     └── models
         └── todo.js
