@@ -8,7 +8,7 @@
     "start": "npm run dev:nw",
     "compile": "$(npm bin)/webpack --progress",
     "build": "npm install && npm run compile",
-    "deploy": "meteor deploy meteor-react-redux-boilerplate.meteor.com",
+    "deploy": "NODE_ENV=production npm run build && meteor deploy meteor-react-redux-boilerplate.meteor.com",
     "dev": "NODE_ENV=development $(npm bin)/webpack --watch --progress",
     "dev:nw": "npm run dev -- --nw",
     "test": "npm run test:unit",
