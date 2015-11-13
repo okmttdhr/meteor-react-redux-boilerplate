@@ -1,10 +1,8 @@
 # [Meteor React Redux Boilerplate](https://github.com/okmttdhr/meteor-react-redux-boilerplate)
 
-**A boilerplate to use React + Redux with Meteor.** <a href="http://meteor-react-redux-boilerplate.meteor.com/" target="_blank">Website here</a>.
+**A boilerplate to use React + Redux with Meteor.** <a href="http://meteor-react-redux-boilerplate.meteor.com/" target="_blank">Demo here</a>.
 
 Inspired from <a href="https://github.com/davezuko/react-redux-starter-kit" target="_blank">react-redux-starter-kit</a> and <a href="https://github.com/zhongqf/meteor-react-redux-example" target="_blank">meteor-react-redux-example</a>.
-
-
 
 
 
@@ -62,6 +60,8 @@ $ meteor
 
 run your application at `localhost:3000`
 
+
+
 ## .client directory
 
 ### `npm start`
@@ -74,6 +74,10 @@ watch your files with webpack with debug tool
 
 deploy your application to the web
 
+### `npm run ios`
+
+run your application with iOS simulator
+
 ### `npm test`
 
 test your application with mocha
@@ -81,13 +85,16 @@ test your application with mocha
 ### `npm run eslint`
 
 
+
 ## Config
 
-alias available like this
+`.client` folder's alias is available like this
 
 ```javascript
 import someAction from 'dir_src/actions/someAction';
 ```
+
+
 
 # Structure
 
