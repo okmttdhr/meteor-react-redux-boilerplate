@@ -86,7 +86,7 @@ test your application with mocha
 
 
 
-## Config
+## Alias
 
 `.client` folder's alias is available like this
 
@@ -196,7 +196,7 @@ Todos.update(action.id, {$set: {text: action.text}});
 ```
 
 
-## Future
+## Future List
 
 - [ ] test MongoDB
 - [ ] delete autopublish
