@@ -2,7 +2,7 @@ import {
   ADD_TODO,
   DELETE_TODO,
   EDIT_TODO,
-  MARK_TODO,
+  COMPLETE_TODO,
 } from 'dir_src/constants';
 
 export function addTodo(text) {
@@ -27,9 +27,9 @@ export function editTodo(id, text) {
   };
 }
 
-export function markTodo(id) {
+export function completeTodo(id) {
   return {
-    type: MARK_TODO,
+    type: COMPLETE_TODO,
     id,
   };
 }

@@ -7,7 +7,7 @@ const TodoItem = React.createClass({
     todo: PropTypes.object.isRequired,
     editTodo: PropTypes.func.isRequired,
     deleteTodo: PropTypes.func.isRequired,
-    markTodo: PropTypes.func.isRequired,
+    completeTodo: PropTypes.func.isRequired,
   },
 
   getInitialState() {
@@ -30,12 +30,12 @@ const TodoItem = React.createClass({
   },
 
   render() {
-    const {todo, markTodo, deleteTodo} = this.props;
+    const {todo, completeTodo, deleteTodo} = this.props;
 
     return (
       <li className={classnames({
         TodoItem: true,
-        completed: todo.marked,
+        completed: todo.completed,
         editing: this.state.editing,
       })}>
         {this.state.editing ?
@@ -47,8 +47,8 @@ const TodoItem = React.createClass({
             <input
               className='toggle'
               type='checkbox'
-              checked={todo.marked}
-              onChange={() => markTodo(todo._id)} />
+              checked={todo.completed}
+              onChange={() => completeTodo(todo._id)} />
             <label onDoubleClick={this.handleDoubleClick}>
               {todo.text}
             </label>

@@ -3,7 +3,7 @@ import {
   ADD_TODO,
   DELETE_TODO,
   EDIT_TODO,
-  MARK_TODO,
+  COMPLETE_TODO,
 } from 'dir_src/constants';
 import { createReducer } from 'dir_src/utils';
 
@@ -25,7 +25,7 @@ export default createReducer(initialState, {
     Todos.update(action.id, {$set: {text: action.text}});
     return state;
   },
-  [MARK_TODO]: (state, action) => {
+  [COMPLETE_TODO]: (state, action) => {
     const todo = Todos.findOne(action.id);
     Todos.update(action.id, {$set: {completed: !todo.completed}});
     return state;

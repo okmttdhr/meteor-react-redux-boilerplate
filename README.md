@@ -16,7 +16,7 @@ Inspired from <a href="https://github.com/davezuko/react-redux-starter-kit" targ
 * <a href="https://github.com/rackt/redux" target="_blank">Redux</a>
 * <a href="https://github.com/babel/babel" target="_blank">Babel</a>
 * <a href="https://github.com/webpack/webpack" target="_blank">Webpack</a>
-* <a href="https://github.com/mochajs/mocha" target="_blank">mochajs/mocha</a>
+* <a href="https://github.com/mochajs/mocha" target="_blank">Mocha</a>
 
 
 
@@ -106,8 +106,7 @@ In `.client` folder, almost same structure as <a href="https://github.com/davezu
 # in .client folder
 
 ├── actions
-│   └── Todo
-│       └── index.js
+│   └── Todo.js
 ├── components
 │   ├── TodoAdd.js
 │   ├── TodoApp.js
@@ -116,42 +115,70 @@ In `.client` folder, almost same structure as <a href="https://github.com/davezu
 ├── constants
 │   └── index.js
 ├── containers
+│   ├── DevTools.js
+│   ├── DevToolsWindow.js
 │   └── Root.js
-├── index.js
+├── initialStates
+│   └── index.js
 ├── layouts
-│   └── CoreLayout
-│       └── index.js
+│   └── CoreLayout.js
 ├── reducers
-│   ├── Todo
-│   │   └── index.js
+│   ├── Todo.js
 │   └── index.js
 ├── routes
 │   └── index.js
-├── server.js
 ├── store
 │   └── configureStore.js
+├── styles
+│   ├── _base.scss
+│   ├── core.scss
+│   └── vendor
+│       └── _normalize.scss
 ├── utils
 │   └── index.js
 ├── views
-│   └── HomeView
-│       └── index.js
+│   └── HomeView.js
+├── test
+│   ├── actions
+│   │   └── todo.js
+│   ├── components
+│   │   └── todo.js
+│   ├── helper
+│   │   ├── index.js
+│   │   └── mock.js
+│   └── index.js
+├── config
+│   ├── index.js
+│   └── webpack.js
+├── index.js
 ├── package.json
 └── webpack.config.js
 ```
 
-But there are some differences. You can use `Model` in React components, here is example in `.client/views/HomeView`.
+But there are some differences. You can use `Model` in React components, here is an example.
 
 ```javascript
-mixins: [ReactMeteorData],
+const HomeView = React.createClass({
+  mixins: [ReactMeteorData],
 
-getMeteorData() {
-  return {
-    todos: Todos.find({}).fetch(),
-  };
-},
+  getMeteorData() {
+    return {
+      todos: Todos.find({}).fetch(),
+    };
+  },
+
+  render () {
+    return (
+      <div className='HomeView'>
+        {JSON.stringify(this.data.todos)}
+      </div>
+    );
+  },
+});
+
 ```
 
-Now you can read data with `this.data.todos` in React Component, and **it's automatically synced to all connected clients in realtime thanks to Meteor and ReactMeteor**. That's why I don't use `redux state` to get datas from MongoDB.
+Now you can read data with `this.data.todos` in React Component, and **it's automatically synced to all connected clients in realtime thanks to Meteor and ReactMeteor**. That's why I don't use `redux state` in case getting datas from MongoDB.
 
 And you can easily update MongoDB like below in `.client/reducers/Todo/index.js`.
 
