@@ -55,4 +55,3 @@ export class HomeView extends React.Component {
 
 const HomeViewWithMixin = reactMixin.decorate(ReactMeteorData)(HomeView);
 export default connect(mapStateToProps, mapDispatchToProps)(HomeViewWithMixin);
-export default connect(mapStateToProps, mapDispatchToProps)(HomeView);
