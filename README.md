@@ -168,8 +168,6 @@ But there are some differences. You can use `Model` in React components, here is
 
 ```javascript
 const HomeView = React.createClass({
-  mixins: [ReactMeteorData],
-
   getMeteorData() {
     return {
       todos: Todos.find({}).fetch(),
