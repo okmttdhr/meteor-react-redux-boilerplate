@@ -2,6 +2,7 @@
   "name": "meteor-react-redux-boilerplate",
   "version": "0.0.0",
   "description": "https://github.com/okmttdhr/meteor-react-redux-boilerplate",
+  "author": "okp",
   "main": "",
   "scripts": {
     "postinstall": "cd node_modules && node -e \"var srcpath='../../.client';var dstpath='dir_src';var fs=require('fs');fs.exists(dstpath,function(exists){if(!exists){fs.symlinkSync(srcpath,dstpath,'dir');}});\"",

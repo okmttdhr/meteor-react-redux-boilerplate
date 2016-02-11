@@ -1,9 +1,9 @@
 # [Meteor React Redux Boilerplate](https://github.com/okmttdhr/meteor-react-redux-boilerplate)
 
-**A boilerplate to use React + Redux with Meteor.** <a href="http://meteor-react-redux-boilerplate.meteor.com/" target="_blank">Demo here</a>.
+**A boilerplate to use React + Redux with Meteor** Inspired from <a href="https://github.com/davezuko/react-redux-starter-kit" target="_blank">react-redux-starter-kit</a> and <a href="https://github.com/zhongqf/meteor-react-redux-example" target="_blank">meteor-react-redux-example</a>.
 
-Inspired from <a href="https://github.com/davezuko/react-redux-starter-kit" target="_blank">react-redux-starter-kit</a> and <a href="https://github.com/zhongqf/meteor-react-redux-example" target="_blank">meteor-react-redux-example</a>.
-
+* <a href="http://meteor-react-redux-boilerplate.meteor.com/" target="_blank">Demo</a>
+* <a href="http://qiita.com/okmttdhr/items/8fc7c28c1887fa70a5a3" target="_blank">Article(in Japanese)</a>
 
 
 # Features
@@ -20,23 +20,13 @@ Inspired from <a href="https://github.com/davezuko/react-redux-starter-kit" targ
 
 # Getting Started
 
-## For the first time
-
-At `.client` directory
-
-```bash
-$ npm run build
-```
-
-## Run
-
-At root directory
-
-```bash
-$ meteor
-```
-
 ## Development
+
+At `.client` directory for the first time
+
+```bash
+$ npm install
+```
 
 At `.client` directory
 
@@ -109,7 +99,7 @@ import someAction from 'dir_src/actions/someAction';
         └── todo.js
 ```
 
-In `.client` folder, almost same structure as <a href="https://github.com/davezuko/react-redux-starter-kit" target="_blank">react-redux-starter-kit</a>. **You can develop Meteor application just like an usual Single Page Application with Webpack for the web**.
+In `.client` folder, almost same structure as <a href="https://github.com/davezuko/react-redux-starter-kit" target="_blank">react-redux-starter-kit</a>. **You can develop Meteor application just like an usual Single Page Application with webpack for the web**.
 
 ```bash
 # in .client folder
