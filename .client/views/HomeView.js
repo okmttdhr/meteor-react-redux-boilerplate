@@ -42,7 +42,7 @@ export class HomeView extends React.Component {
   render () {
     return (
       <div className='HomeView'>
-        <h1>Meteor React Redux Boilerplateaaa</h1>
+        <h1>Meteor React Redux Boilerplate</h1>
         <TodoAdd addTodo={this.props.actions.addTodo} />
         <TodoApp
           todos={this.data.todos}

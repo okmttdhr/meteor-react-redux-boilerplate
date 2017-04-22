@@ -62,7 +62,7 @@ watch your files with webpack with debug tool
 
 ### `npm run deploy`
 
-deploy your application to the web
+deploy your application to the web. change `meteor-react-redux-boilerplate.meteor.com` in the package.json
 
 ### `npm run ios`
 
